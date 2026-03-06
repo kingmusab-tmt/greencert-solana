@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="sun-glow" cx="50%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <!-- Sun -->
+  <circle cx="650" cy="80" r="60" fill="#fbbf24" opacity="0.2"/>
+  <circle cx="650" cy="80" r="40" fill="#fbbf24" opacity="0.4"/>
+  <circle cx="650" cy="80" r="22" fill="#fbbf24" opacity="0.8"/>
+  <!-- Rays -->
+  <line x1="650" y1="20" x2="650" y2="5" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="690" y1="40" x2="705" y2="30" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="710" y1="80" x2="725" y2="80" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="690" y1="120" x2="705" y2="130" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="650" y1="140" x2="650" y2="155" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="610" y1="120" x2="595" y2="130" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="590" y1="80" x2="575" y2="80" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <line x1="610" y1="40" x2="595" y2="30" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+  <!-- Ground -->
+  <rect x="0" y="400" width="800" height="100" fill="#0b1220"/>
+  <!-- Solar Panels -->
+  <g transform="translate(100,280)">
+    <rect x="0" y="0" width="120" height="80" rx="4" fill="url(#panel)" opacity="0.8"/>
+    <line x1="0" y1="27" x2="120" y2="27" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="0" y1="54" x2="120" y2="54" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="40" y1="0" x2="40" y2="80" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="80" y1="0" x2="80" y2="80" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <!-- Stand -->
+    <rect x="55" y="80" width="10" height="40" fill="#334155"/>
+    <rect x="30" y="120" width="60" height="4" rx="2" fill="#334155"/>
+  </g>
+  <g transform="translate(280,260)">
+    <rect x="0" y="0" width="150" height="100" rx="4" fill="url(#panel)" opacity="0.9"/>
+    <line x1="0" y1="33" x2="150" y2="33" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="0" y1="66" x2="150" y2="66" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="50" y1="0" x2="50" y2="100" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="100" y1="0" x2="100" y2="100" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <rect x="70" y="100" width="10" height="40" fill="#334155"/>
+    <rect x="45" y="140" width="60" height="4" rx="2" fill="#334155"/>
+  </g>
+  <g transform="translate(500,270)">
+    <rect x="0" y="0" width="130" height="90" rx="4" fill="url(#panel)" opacity="0.85"/>
+    <line x1="0" y1="30" x2="130" y2="30" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="0" y1="60" x2="130" y2="60" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="43" y1="0" x2="43" y2="90" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="87" y1="0" x2="87" y2="90" stroke="#0f172a" stroke-width="1.5" opacity="0.5"/>
+    <rect x="60" y="90" width="10" height="40" fill="#334155"/>
+    <rect x="35" y="130" width="60" height="4" rx="2" fill="#334155"/>
+  </g>
+  <!-- Energy lines -->
+  <path d="M220 310 Q300 200 400 180 Q500 160 650 80" stroke="#10b981" stroke-width="1.5" fill="none" opacity="0.4" stroke-dasharray="6 4"/>
+  <path d="M355 300 Q420 210 500 190 Q580 170 650 80" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.3" stroke-dasharray="6 4"/>
+  <!-- Floating particles -->
+  <circle cx="300" cy="200" r="3" fill="#10b981" opacity="0.6"/>
+  <circle cx="450" cy="160" r="2" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="550" cy="140" r="2.5" fill="#10b981" opacity="0.4"/>
+  <circle cx="200" cy="250" r="2" fill="#06b6d4" opacity="0.3"/>
+</svg>

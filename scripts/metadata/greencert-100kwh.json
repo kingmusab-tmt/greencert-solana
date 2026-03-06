@@ -1,0 +1,20 @@
+{
+  "name": "GreenCert #1 — 100 kWh",
+  "symbol": "GCERT",
+  "description": "Compressed NFT representing 100 kWh of verified solar energy generation from a residential installation in Nigeria. Issued by GreenCert Nigeria on the Solana network.",
+  "image": "",
+  "external_url": "https://greencert.ng",
+  "attributes": [
+    { "trait_type": "Energy (kWh)", "value": "100" },
+    { "trait_type": "Source", "value": "Solar PV" },
+    { "trait_type": "Region", "value": "Abuja, Nigeria" },
+    { "trait_type": "Device", "value": "Growatt MIN 3000TL-X" },
+    { "trait_type": "CO2 Avoided (kg)", "value": "43" },
+    { "trait_type": "Verification", "value": "Proof of Generation" },
+    { "trait_type": "Issued", "value": "2026-03-06" }
+  ],
+  "properties": {
+    "category": "certificate",
+    "files": []
+  }
+}

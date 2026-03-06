@@ -1,0 +1,24 @@
+Project Title: GreenCert Nigeria
+Project Description: A DePIN platform using Solana State Compression to tokenize verified carbon offsets from small-scale solar installations in West Africa.
+Compensation require: 10,000
+Project Details:
+The Problem: Nigeria has a booming off-grid solar market, but small-scale producers (households/SMEs) cannot access the global carbon credit market due to high verification costs and "rent" fees on traditional blockchains.
+
+The Solution: GreenCert uses Solana's State Compression to mint "Micro-Offsets" as compressed NFTs (cNFTs) for every 100kWh of verified green energy. This reduces minting costs by 99.9%, making it profitable for Nigerian homeowners to tokenize their carbon avoidance. I will build a Next.js dashboard where these cNFTs can be sold to corporations, providing a "Green Dividend" to Nigerian solar users.
+
+How we solve the Oracle Problem: To ensure every GreenCert is backed by real physics, we implement a Validation Gateway. We ingest raw telemetry (Voltage, Current, Watt-hours) from smart meters via MQTT/HTTPS. Our backend accumulates this data until it hits a 100kWh threshold. To prevent 'phantom generation' (fraud), our system cross-references production spikes with local irradiance data via OpenWeatherMap APIs. Only after this 'Proof of Generation' is verified do we trigger the Metaplex Bubblegum program to mint a compressed NFT (cNFT) to the user's wallet."
+
+Goals and Milestones
+Milestone 1 ($1,000): Architecture & Compression Test. Set up a Merkle Tree on Solana Devnet and write a Typescript script that would successfully mint a test cNFT representing 100kWh of solar data.
+
+Milestone 2 ($2,000): The Oracle Engine. Develop a Node.js middleware that connects to a solar inverter API (or IoT meter) and logs cumulative energy to a MongoDB database.
+
+Milestone 3 ($2,500): Verification API & Dashboard. Build the Node.js backend to ingest solar data and a Next.js frontend where users can connect Solana wallets to view their "Minted Carbon Avoidance."
+
+Milestone 4 ($4,500): Mainnet Pilot. Deploy to Mainnet and onboard real solar installations in Nigeria to mint the first live "GreenCerts." Open-source the code for the Solana community.
+
+Primary Key Performance Indicator
+Metric: Total Metric Tons of CO2 tokenized on-chain. Success Definition: The project is a success when 500 individual GreenCert cNFTs (representing 50MWh of solar energy) are minted on Mainnet and the repository is public for other DePIN builders.
+
+
+

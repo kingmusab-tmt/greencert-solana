@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./components/providers";
+import { ThemeProvider } from "./components/theme-provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -12,15 +13,20 @@ const inter = Inter({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Solana dApp Starter",
-  description: "A minimal Next.js starter powered by @solana/react-hooks",
+  title: "GreenCert Nigeria — Tokenize Solar Energy on Solana",
+  description:
+    "Enterprise DePIN platform using Solana state compression to tokenize verified solar energy into carbon offset cNFTs across West Africa.",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -30,14 +36,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <Providers>
-        <body
-          suppressHydrationWarning
-          className={`${inter.variable} ${geistMono.variable} antialiased`}
-        >
-          {children}
-        </body>
+        <ThemeProvider>
+          <body
+            suppressHydrationWarning
+            className={`${inter.variable} ${geistMono.variable} antialiased`}
+          >
+            {children}
+          </body>
+        </ThemeProvider>
       </Providers>
     </html>
   );

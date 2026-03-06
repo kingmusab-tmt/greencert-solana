@@ -17,3 +17,13 @@ Standard NFTs cost ~$2.00 to mint. A Nigerian homeowner producing 100kWh shouldn
 - **Frontend**: Next.js, Tailwind CSS, Solana Wallet Adapter
 - **Backend**: Node.js, Express, MongoDB (Data Accumulator)
 - **Blockchain**: Solana Web3.js, Metaplex Bubblegum (Compression)
+
+## DePIN-focused logo that explicitly tells the GreenCert story
+
+This logo combines several key concepts into a single icon:
+
+- **The Base Block (Emerald Green)**: The diamond/block shape represents the blockchain link and the hardware (solar panels) in Nigeria.
+
+- **The Energy Vector (Cyan Arrow)**: The internal line transforms from a leaf (Nature) into a sharp, upward arrow (Growth/Value). The color shift from Emerald to Cyan (the color of clean atmosphere) symbolizes the Carbon Saving.
+
+- **The Hidden Icon**: If you look closely at the central negative space, it forms a stylized 'G' for GreenCert.
