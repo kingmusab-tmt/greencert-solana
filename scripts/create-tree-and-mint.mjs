@@ -1,5 +1,5 @@
 /**
- * GreenCert Milestone 1 — Merkle Tree + cNFT Mint on Solana Devnet
+ * GreenCert Milestone 1 - Merkle Tree + cNFT Mint on Solana Devnet
  *
  * Usage:
  *   node scripts/create-tree-and-mint.mjs                           # auto-creates & persists keypair
@@ -21,7 +21,6 @@ import {
   keypairIdentity,
   publicKey,
   sol,
-  lamports,
 } from "@metaplex-foundation/umi";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -66,7 +65,9 @@ async function ensureFunded(umi, pk) {
     if (msg.includes("429")) {
       console.log("\n   !! Devnet faucet rate-limited (429).");
       console.log(`   !! Please airdrop manually to: ${pk}`);
-      console.log("   !! Visit https://faucet.solana.com and paste the address above.");
+      console.log(
+        "   !! Visit https://faucet.solana.com and paste the address above."
+      );
       console.log("   !! Then re-run this script.\n");
       process.exit(2);
     }
@@ -77,14 +78,14 @@ async function ensureFunded(umi, pk) {
 /* ---- main ---- */
 
 async function main() {
-  console.log("\nGreenCert Milestone 1 — Merkle Tree & cNFT Mint\n");
+  console.log("\nGreenCert Milestone 1 - Merkle Tree & cNFT Mint\n");
 
   // 1. Create UMI context
   console.log("1. Creating UMI context...");
   const umi = createUmi(RPC_URL).use(mplBubblegum());
   console.log("   UMI ready");
 
-  // 2. Resolve identity — prefer CLI arg → persisted file → generate new
+  // 2. Resolve identity - prefer CLI arg -> persisted file -> generate new
   let signer;
   const keypairArg = process.argv[2];
 
