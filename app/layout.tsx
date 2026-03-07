@@ -37,16 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <Providers>
-        <ThemeProvider>
-          <body
-            suppressHydrationWarning
-            className={`${inter.variable} ${geistMono.variable} antialiased`}
-          >
-            {children}
-          </body>
-        </ThemeProvider>
-      </Providers>
+      <body
+        suppressHydrationWarning
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
+      >
+        <Providers>
+          <ThemeProvider>{children}</ThemeProvider>
+        </Providers>
+      </body>
     </html>
   );
 }

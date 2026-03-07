@@ -70,7 +70,6 @@ type FaqItem = { q: string; a: string };
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Dashboard", href: "#dashboard" },
   { label: "Architecture", href: "#architecture" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -302,11 +301,11 @@ function Header() {
           </button>
 
           <a
-            href="#"
+            href="/signin"
             className="hidden sm:inline-flex items-center gap-2 rounded-xl gradient-bg px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-accent/20 transition-all hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
           >
             <Wallet className="h-4 w-4" />
-            Launch App
+            Login
           </a>
 
           <button
@@ -345,12 +344,12 @@ function Header() {
                 </a>
               ))}
               <a
-                href="#"
+                href="/signin"
                 onClick={closeMobile}
                 className="mt-2 flex items-center justify-center gap-2 rounded-xl gradient-bg px-5 py-3 text-sm font-semibold text-white"
               >
                 <Wallet className="h-4 w-4" />
-                Launch App
+                Login
               </a>
             </nav>
           </div>
@@ -407,11 +406,11 @@ function HeroSection() {
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#"
+                href="/signin"
                 className="group inline-flex items-center gap-2.5 rounded-xl gradient-bg px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:shadow-xl hover:shadow-accent/35 hover:-translate-y-0.5"
               >
                 <Wallet className="h-4 w-4" />
-                Connect Wallet
+                Login
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
@@ -742,23 +741,9 @@ function DashboardSection() {
                 alt="GreenCert analytics dashboard showing energy production and mint data"
                 width={600}
                 height={400}
-                className="w-full h-auto"
+                className="h-auto w-full"
               />
             </div>
-            {/* Floating active indicator */}
-            <motion.div
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute -top-3 -right-3 flex items-center gap-2 card-surface rounded-full px-4 py-2 shadow-lg"
-            >
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-              </span>
-              <span className="text-xs font-semibold text-foreground">
-                Live
-              </span>
-            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -1052,18 +1037,16 @@ function Footer() {
               Platform
             </p>
             <ul className="mt-4 space-y-3">
-              {["Features", "How It Works", "Dashboard", "Architecture"].map(
-                (lnk) => (
-                  <li key={lnk}>
-                    <a
-                      href={`#${lnk.toLowerCase().replace(/ /g, "-")}`}
-                      className="text-sm text-foreground-secondary transition-colors hover:text-foreground"
-                    >
-                      {lnk}
-                    </a>
-                  </li>
-                )
-              )}
+              {["Features", "How It Works", "Architecture"].map((lnk) => (
+                <li key={lnk}>
+                  <a
+                    href={`#${lnk.toLowerCase().replace(/ /g, "-")}`}
+                    className="text-sm text-foreground-secondary transition-colors hover:text-foreground"
+                  >
+                    {lnk}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

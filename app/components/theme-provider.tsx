@@ -5,7 +5,6 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -31,20 +30,25 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  // Lazy initializer only runs on the client; SSR always gets "dark".
-  const [theme, setTheme] = useState<Theme>(getStoredTheme);
-  const isFirstRender = useRef(true);
+  // Keep the first client render aligned with SSR to avoid hydration mismatch.
+  const [theme, setTheme] = useState<Theme>("dark");
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Skip the first render — the lazy initializer already set the value.
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
+    setTheme(getStoredTheme());
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) {
+      return;
     }
+
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
     localStorage.setItem("gc-theme", theme);
-  }, [theme]);
+  }, [theme, isMounted]);
 
   const toggle = useCallback(() => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
